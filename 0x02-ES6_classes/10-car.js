@@ -1,14 +1,15 @@
-/* eslint-disable */
-import Car from './10-car';
-
-export default class EVCar extends Car {
-  constructor(brand, motor, color, range) {
-    super(brand, motor, color);
-    this._range = range;
+export default class Car {
+  constructor(brand, motor, color) {
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
   }
 
-/* Graham S. Paul  - 100-evcar.js */
+  static get [Symbol.species]() {
+    return this;
+  }
+
   cloneCar() {
-    return new Car();
+    return new (this.constructor[Symbol.species])();
   }
 }

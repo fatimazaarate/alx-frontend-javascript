@@ -1,4 +1,5 @@
-import Car from "./10-car.js";
+/* eslint-disable */
+import Car from './10-car';
 
 export default class EVCar extends Car {
   constructor(brand, motor, color, range) {
@@ -6,7 +7,8 @@ export default class EVCar extends Car {
     this._range = range;
   }
 
+/* Graham S. Paul  - 100-evcar.js */
   cloneCar() {
-    return super.cloneCar();
+    return new Car();
   }
 }
