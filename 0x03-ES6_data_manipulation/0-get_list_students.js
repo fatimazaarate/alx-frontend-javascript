@@ -1,4 +1,4 @@
-export function getListStudents() {
+export default function getListStudents() {
   const studentList = [
     { 'firstName ': 'Guillaume', 'id':1, 'location': 'San Francisco'},
     { 'firstName ': 'James', 'id': 2, 'location': 'Columbia'},
